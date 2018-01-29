@@ -88,12 +88,13 @@ def zero_changer(tuple_of_lists):
     #    TIME ESTIMATE:  10 minutes.
     # ------------------------------------------------------------------
 
-    count = 1
+    count = 0
     for k in range(len(tuple_of_lists)):
         for j in range(len(tuple_of_lists[k])):
             if (tuple_of_lists[k][j] == 0):
-                tuple_of_lists[k][j] = count
                 count += 1
+                tuple_of_lists[k][j] = count
+
 
     print("My code works however pycarm is freaking out and telling me "
           "that my list is an int even though it identifies it as a list"
