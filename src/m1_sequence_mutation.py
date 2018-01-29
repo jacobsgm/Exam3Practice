@@ -96,7 +96,8 @@ def zero_changer(tuple_of_lists):
                 count += 1
 
     print("My code works however pycarm is freaking out and telling me "
-          "that my list is an int even though it identifies it as a list")
+          "that my list is an int even though it identifies it as a list"
+          "I've checked this was 5 different people and Knut (our TA) and he doesn't know either")
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
