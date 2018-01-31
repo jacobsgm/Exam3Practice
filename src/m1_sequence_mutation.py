@@ -45,8 +45,8 @@ def run_test_zero_changer():
     print('  Actual:  ', test2)
 
     # Test 3:
-    test3 = ([8, 0, 0, 0])
-    expected3 = ([8, 1, 2, 3])
+    test3 = ([8, 0, 0, 0],[6, 7, 3, 1])
+    expected3 = ([8, 1, 2, 3],[6, 7, 3, 1])
     zero_changer(test3)
     print()
     print('Test 3:')
@@ -95,10 +95,6 @@ def zero_changer(tuple_of_lists):
                 count += 1
                 tuple_of_lists[k][j] = count
 
-
-    print("My code works however pycarm is freaking out and telling me "
-          "that my list is an int even though it identifies it as a list"
-          "I've checked this was 5 different people and Knut (our TA) and he doesn't know either")
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
