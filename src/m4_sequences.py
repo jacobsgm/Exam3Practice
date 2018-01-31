@@ -417,7 +417,7 @@ def practice_problem4d(sequence):
       :rtype: int
     """
     ####################################################################
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -426,9 +426,9 @@ def practice_problem4d(sequence):
     ####################################################################
 
     number = 0
-    for k in range(len(sequence)):
-        if(is_prime(sequence[k]) == True & sequence[k+1] != sequence[k] & is_prime(sequence[k+1])):
-            number+=(sequence[k])
+    for k in range(1,len(sequence)):
+        if((is_prime(sequence[k-1]) == True) & (is_prime(sequence[k])== True) & (sequence[k-1] != sequence[k])):
+            number+=(sequence[k-1])
     return number
 
 # ----------------------------------------------------------------------
