@@ -103,6 +103,7 @@ def hourglass(window, n, point, radius, color):
     # ------------------------------------------------------------------
 
     for k in range(n,1):
+        print('placeholder')
 
 
 
