@@ -192,7 +192,7 @@ def run_test_big_letters():
     print('Actual is:  ', answer)
 
     # Test 2:
-    expected = 'WEDBABIESCOOTSAPSB'
+    expected = 'WEDBABIESCSAPSB'
     answer = big_letters([(3, 1, 4),  # not a string
                           'WherE Do BABIES Come from?',  # OTSSS
                           (10, 'OkokokOk ThiS?', 10),  # not a string
@@ -263,7 +263,7 @@ def big_letters(sequence_of_sequences):
     list = ''
     for k in range(len(sequence_of_sequences)):
         for j in range(len(sequence_of_sequences[k])):
-            if((type(sequence_of_sequences[k][j]) is str)):
+            if((type(sequence_of_sequences[k]) is str)):
                 if((sequence_of_sequences[k][j]).isupper()):
                     list+=sequence_of_sequences[k][j]
     return list
