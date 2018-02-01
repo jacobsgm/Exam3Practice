@@ -212,6 +212,13 @@ def many_hourglasses(window, square, m, colors):
     # ------------------------------------------------------------------
 
 
+    hourglass(window, 1, square.center,square.length_of_each_side/2,'red')
+    newrect = rg.Rectangle(rg.Point(square.center.x-square.length_of_each_side/2,
+                           square.center.y - square.length_of_each_side / 2)),rg.Point(square.center.x+square.length_of_each_side/2,
+                           square.center.y + square.length_of_each_side / 2)
+
+
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
