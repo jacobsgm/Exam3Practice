@@ -7,7 +7,7 @@ This problem provides practice at:
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
          their colleagues and Garrett Jacobs.
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
-
+import math as math
 ########################################################################
 # Students:
 #
@@ -102,9 +102,36 @@ def hourglass(window, n, point, radius, color):
     #    TIME ESTIMATE:  25 minutes (warning: this problem is challenging)
     # ------------------------------------------------------------------
 
-    for k in range(n,1):
-        print('placeholder')
+    originalx = point.x
+    originaly = point.y
 
+    for h in range(n):
+        make_row(window,h+1,point,radius,color)
+        point.y = point.y + (2*radius*math.sin(math.pi/3))
+        point.x = point.x - radius
+
+    point.x = originalx
+    point.y = originaly
+
+    for t in range(n):
+        make_row(window, t+1, point, radius, color)
+        point.y = point.y - (2*radius*math.sin(math.pi/3))
+        point.x = point.x - radius
+
+def make_row(window,n,point,radius,color):
+
+    center = rg.Point(point.x,point.y)
+
+    for h in range(n):
+        newcircle = rg.Circle(center,radius)
+        begin = rg.Point(center.x-radius,center.y)
+        end = rg.Point(center.x+radius,center.y)
+        linethrucircle = rg.Line(begin,end)
+        newcircle.fill_color = color
+        newcircle.attach_to(window)
+        linethrucircle.attach_to(window)
+        window.render()
+        center.x = center.x +(radius*2)
 
 
 def run_test_many_hourglasses():
@@ -183,6 +210,7 @@ def many_hourglasses(window, square, m, colors):
     #                         a correct "hourglass" function above)
     #    TIME ESTIMATE:  20 minutes (warning: this problem is challenging)
     # ------------------------------------------------------------------
+
 
 
 # ----------------------------------------------------------------------
