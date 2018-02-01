@@ -89,7 +89,7 @@ def hourglass(window, n, point, radius, color):
     a color that rosegraphics understands.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #       We provided some tests for you (above).
     # ------------------------------------------------------------------
     ####################################################################
@@ -212,11 +212,13 @@ def many_hourglasses(window, square, m, colors):
     # ------------------------------------------------------------------
 
 
+    radius = square.length_of_each_side/2
+    centerx = square.center.x
+    centery = square.center.y
+    center = rg.Point(centerx,centery)
 
-    hourglass(window, 1, square.center,square.length_of_each_side/2,'red')
-    newrect = rg.Rectangle(rg.Point(square.center.x-square.length_of_each_side/2,
-                           square.center.y - square.length_of_each_side/2)), rg.Point(square.center.x+square.length_of_each_side/2,
-                           square.center.y + square.length_of_each_side / 2)
+    hourglass(window, 1, center, radius,'red')
+    newrect = rg.Rectangle(rg.Point(center.x - radius, center.y - radius), rg.Point(center.x + radius, center.y + radius))
     newrect.attach_to(window)
 
 
